@@ -1,0 +1,66 @@
+import { SampleMediaItem } from './types';
+import { generateSyntheticVoiceWav, generateAuthenticVoiceWav, getSampleVideoUrl } from './utils/audioSynthesizer';
+
+// Curated high-signal sample media for immediate testing across Image, Video, and Audio
+export const SAMPLE_MEDIA: SampleMediaItem[] = [
+  {
+    id: 'sample-ai-portrait',
+    title: 'AI Photorealistic Portrait',
+    mediaType: 'image',
+    category: 'AI Generated',
+    expectedVerdict: 'Likely Manipulated',
+    description: 'Synthetic human portrait generated with latent diffusion. Notice hyper-smooth skin, asymmetric earlobe contours, and synthetic iris highlights.',
+    mediaUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80',
+    claimContext: 'Claim: Official headshot photograph of a newly appointed tech executive in 2026.',
+  },
+  {
+    id: 'sample-deepfake-video',
+    title: 'Manipulated Video Keyframe',
+    mediaType: 'video',
+    category: 'Deepfake Video',
+    expectedVerdict: 'Likely Manipulated',
+    description: 'Video clip stream ready for frame-by-frame inspection. Scrub through timestamps, inspect lighting coherence, and capture suspicious frames for deepfake analysis.',
+    mediaUrl: getSampleVideoUrl('deepfake'),
+    claimContext: 'Claim: Urgent broadcast footage circulating on social networks showing sudden structural crisis.',
+  },
+  {
+    id: 'sample-audio-clone',
+    title: 'Synthetic Voice Clone (Playable)',
+    mediaType: 'audio',
+    category: 'Voice Clone',
+    expectedVerdict: 'Likely Manipulated',
+    description: 'Synthesized vocoder speech with phase rigidity, robotic quantization, and absence of biological respiration pauses.',
+    mediaUrl: generateSyntheticVoiceWav(4),
+    claimContext: 'Claim: Leaked voicemail recording authorizing an urgent high-value financial wire transfer.',
+  },
+  {
+    id: 'sample-authentic-speech',
+    title: 'Authentic Human Speech (Playable)',
+    mediaType: 'audio',
+    category: 'Authentic Voice',
+    expectedVerdict: 'Likely Authentic',
+    description: 'Genuine human speech recording featuring natural respiratory dynamics, continuous ambient room acoustics, and organic pitch inflections.',
+    mediaUrl: generateAuthenticVoiceWav(4.5),
+    claimContext: 'Claim: Genuine podcast interview commentary discussing cybersecurity forensics.',
+  },
+  {
+    id: 'sample-authentic-press',
+    title: 'Authentic Photojournalism',
+    mediaType: 'image',
+    category: 'Authentic',
+    expectedVerdict: 'Likely Authentic',
+    description: 'Genuine camera sensor capture featuring natural optical depth-of-field, realistic sensor noise floor, and coherent natural outdoor lighting physics.',
+    mediaUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=800&q=80',
+    claimContext: 'Claim: Real candid documentary photograph of an athlete preparing at an international meet.',
+  },
+  {
+    id: 'sample-authentic-video',
+    title: 'Authentic Video Stream',
+    mediaType: 'video',
+    category: 'Authentic Video',
+    expectedVerdict: 'Likely Authentic',
+    description: 'Raw high-definition video capture with physical optical motion blur, consistent sensor Bayer patterns, and natural lighting continuity.',
+    mediaUrl: getSampleVideoUrl('authentic'),
+    claimContext: 'Claim: Raw unedited documentary B-roll captured with high-speed camera.',
+  },
+];

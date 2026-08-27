@@ -1,0 +1,7 @@
+{
+  "name": "TruthLens",
+  "description": "AI-powered deepfake and manipulated media forensic detector analyzing video, image, and voice speech for synthetic manipulation with explainable evidence.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

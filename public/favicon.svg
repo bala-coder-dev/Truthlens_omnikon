@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="lensRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FFFFFF" />
+      <stop offset="50%" stopColor="#00D9FF" />
+      <stop offset="100%" stopColor="#0088CC" />
+    </linearGradient>
+    <linearGradient id="lensGlass" x1="20%" y1="20%" x2="80%" y2="80%">
+      <stop offset="0%" stopColor="#00D9FF" stopOpacity="0.25" />
+      <stop offset="60%" stopColor="#070D18" stopOpacity="0.8" />
+      <stop offset="100%" stopColor="#000000" stopOpacity="0.95" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="#0A192F"/>
+  <circle cx="46" cy="44" r="28" fill="url(#lensGlass)" />
+  <path d="M 26 35 A 22 22 0 0 1 48 22" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round" opacity="0.85" />
+  <circle cx="46" cy="44" r="28" stroke="url(#lensRingGrad)" strokeWidth="5" strokeLinecap="round" />
+  
+  <line x1="68" y1="34" x2="86" y2="34" stroke="#00D9FF" strokeWidth="3" strokeLinecap="round" />
+  <circle cx="91" cy="34" r="1.5" fill="#00D9FF" />
+  <line x1="72" y1="42" x2="85" y2="42" stroke="#00D9FF" strokeWidth="2.5" strokeLinecap="round" />
+  <line x1="70" y1="50" x2="88" y2="50" stroke="#00D9FF" strokeWidth="3" strokeLinecap="round" />
+  <circle cx="93" cy="50" r="1.5" fill="#00D9FF" />
+  <line x1="62" y1="58" x2="78" y2="58" stroke="#00D9FF" strokeWidth="2.5" strokeLinecap="round" />
+
+  <path d="M 30 32 L 52 32" stroke="#FFFFFF" strokeWidth="6" strokeLinecap="round" />
+  <path d="M 41 32 L 41 55" stroke="#FFFFFF" strokeWidth="6" strokeLinecap="round" />
+  <path d="M 50 34 L 50 54 L 66 54" stroke="#00D9FF" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+
+  <line x1="65" y1="63" x2="83" y2="81" stroke="#00D9FF" strokeWidth="6.5" strokeLinecap="round" />
+  <line x1="69" y1="67" x2="79" y2="77" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" opacity="0.8" />
+</svg>
